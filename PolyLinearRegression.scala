@@ -32,7 +32,7 @@ class PolyLinearRegression {
       .withColumn("features", polyDF("polyFeatures"))
 
     val datafixedWithFeaturesLabel = datafixedWithFeatures
-      .join(df1,df1("featNormTemp") === datafixedWithFeatures("fn"))
+      .join(df1,df1("featNormTemp") === datafixedWithFeatures("featNormTemp"))
       .select("label", "polyFeatures")
 
     datafixedWithFeaturesLabel
