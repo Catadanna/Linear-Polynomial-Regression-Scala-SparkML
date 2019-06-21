@@ -1,3 +1,6 @@
+/*
+  @author: Catalina CHIRCU
+ */
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -31,7 +34,7 @@ object RunLR {
     val result = lr2.parseLRForPolynomial(train,test, maxIter, lambda, alpha)
     println("Error on test for LR : " +result)
 
-    }
+  }
 
 
 }
