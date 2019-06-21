@@ -18,7 +18,7 @@ object RunLR {
     val f_train = "./src/main/inc/tv_train.csv"
     val f_test = "./src/main/inc/tv_test.csv"
 
-    val lr2 = new LR2
+    val lr2 = new PolyLinearRegression
 
     val maxIter=10
     val lambda = 0.0
