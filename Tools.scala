@@ -1,6 +1,10 @@
-import org.apache.spark.{SparkContext}
-import org.apache.spark.sql.{DataFrame}
-import org.apache.spark.sql.functions.{udf}
+/*
+ Tools
+ @author: Catalina CHIRCU
+ */
+import org.apache.spark.SparkContext
+import org.apache.spark.sql.DataFrame
+import org.apache.spark.sql.functions.udf
 import org.apache.spark.ml.linalg.{Vector, Vectors}
 import org.apache.spark.mllib.evaluation.RegressionMetrics
 import org.apache.spark.rdd.RDD
@@ -16,8 +20,6 @@ object Tools {
     val rddCollection:RDD[Double] = convertDataFrameToRDD(X,featureName)
     val mean:Double = rddCollection.mean()
     val stddev:Double = rddCollection.stdev()
-    println("Mean : "+mean)
-    println("SDV "+stddev)
     val tranformToNormalized = udf[Double, Double] {
       e => (e - mean) / stddev
     }
