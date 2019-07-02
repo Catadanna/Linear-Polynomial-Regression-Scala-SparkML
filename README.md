@@ -6,7 +6,10 @@ NormalEquation.scala : Example of normal equation in SparkML with Scala, using D
 Tools.scala : Various functions used in the classes. 
 
 Among them : 
+
 Function which converts DataFrame to DenseMatrix
+
 Function which converts DataFrame to DenseVector
+
 Function which converts DataFrame to RDD
 etc. ...
